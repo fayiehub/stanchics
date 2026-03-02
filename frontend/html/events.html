@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Stanchics</title>
+  <meta name="description" content="Upcoming and past Stanchics events — talks, meetups, conferences, and community outreach in Nairobi, Kenya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- Nav and Footer injected by js/main.js -->
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <section class="page-hero page-hero--dark">
+    <div class="container">
+      <div class="section__label" style="background:rgba(255,255,255,0.15); color:var(--color-primary-light)">Events</div>
+      <h1 class="page-hero__heading">Events &amp; Gatherings</h1>
+      <p class="page-hero__sub">Where the community comes alive.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       UPCOMING EVENTS
+  ============================================================ -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header fade-in-up">
+        <div class="section__label">Upcoming</div>
+        <h2 class="section__heading">What's on</h2>
+      </div>
+      <div class="empty-state fade-in-up">
+        <div class="empty-state__icon">
+          <i data-lucide="calendar" width="30" height="30"></i>
+        </div>
+        <h3 class="empty-state__heading">Something's coming soon.</h3>
+        <p class="empty-state__text">Our next event is in the works. Sign up to be the first to know when it drops.</p>
+        <div style="display:flex; gap:var(--space-2); justify-content:center; flex-wrap:wrap;">
+          <input type="email" class="form-input" placeholder="Your email" style="max-width:280px" id="eventsEmailInput" />
+          <button class="btn btn--primary" onclick="handleEventsSignup()">Notify Me</button>
+        </div>
+        <div id="eventsSignupSuccess" class="form-success" style="max-width:420px; margin:var(--space-3) auto 0;">
+          <i data-lucide="check-circle" width="20" height="20"></i>
+          Got it! We'll notify you when events are announced.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAST EVENTS
+  ============================================================ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section__header fade-in-up">
+        <div class="section__label">Past Events</div>
+        <h2 class="section__heading">Where it all started</h2>
+      </div>
+      <div class="grid-2 fade-in-up">
+        <div class="card event-card">
+          <div class="event-card__tag">
+            <i data-lucide="coffee" width="12" height="12"></i> Meetup
+          </div>
+          <div class="event-card__title">First Convening — Getting to Know Each Other</div>
+          <div class="event-card__meta">
+            <div class="event-card__meta-item">
+              <i data-lucide="calendar" width="14" height="14"></i> February 2026
+            </div>
+            <div class="event-card__meta-item">
+              <i data-lucide="map-pin" width="14" height="14"></i> Nairobi, Kenya
+            </div>
+          </div>
+          <p class="event-card__desc">Our very first gathering — an intimate evening of introductions, honest conversation, and the beginning of something special.</p>
+          <span class="tag tag--neutral">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SUGGEST AN EVENT
+  ============================================================ -->
+  <section class="section section--peach">
+    <div class="container">
+      <div style="max-width:640px; margin:0 auto; text-align:center;" class="fade-in-up">
+        <div class="section__label section__label--accent">Get Involved</div>
+        <h2 class="section__heading">Have an idea for an event?</h2>
+        <p class="section__sub" style="margin:0 auto var(--space-5);">Whether you want to host a talk, sponsor a venue, or suggest a format — we'd love to hear from you.</p>
+        <a class="btn btn--accent" href="../html/contact.html">
+          <i data-lucide="send" width="16" height="16"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/events.js"></script>
+</body>
+</html>

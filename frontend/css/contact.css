@@ -1,0 +1,91 @@
+/* css/contact.css — styles specific to contact.html */
+
+.contact-hero {
+  padding: var(--space-7) 0 var(--space-4);
+}
+
+.contact-hero__heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.contact-hero__sub {
+  font-size: 18px;
+  color: var(--color-neutral-600);
+}
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.contact-info__heading {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.contact-info__text {
+  font-size: 16px;
+  color: var(--color-neutral-600);
+  line-height: 1.75;
+  margin-bottom: var(--space-5);
+}
+
+.contact-info__items { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-5); }
+
+.contact-info__item { display: flex; align-items: flex-start; gap: 14px; }
+
+.contact-info__icon {
+  width: 40px; height: 40px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.contact-info__item-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-neutral-600);
+  margin-bottom: 3px;
+}
+
+.contact-info__item-value { font-size: 15px; color: var(--color-neutral-900); font-weight: 500; }
+
+.contact-form {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-6);
+}
+
+.contact-form__heading {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.contact-form__full { margin-bottom: var(--space-3); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-split { grid-template-columns: 1fr; }
+  .contact-form__grid { grid-template-columns: 1fr; }
+}

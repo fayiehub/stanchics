@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — Stanchics</title>
+  <meta name="description" content="Meet the Stanchics community and join the growing network of women in tech across Kenya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/community.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- Nav and Footer injected by js/main.js -->
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <section class="page-hero page-hero--blue">
+    <div class="container">
+      <div class="section__label">Community</div>
+      <h1 class="page-hero__heading">The Women of Stanchics</h1>
+      <p class="page-hero__sub">A growing family of engineers, designers, founders, PMs, and data professionals across Kenya.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEMBERS GRID
+  ============================================================ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section__header fade-in-up">
+        <div class="section__label">Members</div>
+        <h2 class="section__heading">Meet the community</h2>
+        <p class="section__sub">These are the founding women shaping what Stanchics becomes.</p>
+      </div>
+      <div class="grid-3 fade-in-up">
+        <div class="card member-card">
+          <div class="member-card__avatar">AE</div>
+          <div><div class="member-card__name">Amisi Evelyne</div><div class="member-card__role">Head Governance, Control & Compliance · Technology</div></div>
+          <p class="member-card__quote">"I've been in tech for 8 years and finally feel like I've found my people."</p>
+        </div>
+        <div class="card member-card">
+          <div class="member-card__avatar">TN</div>
+          <div><div class="member-card__name">Tehillah Ng'ayu</div><div class="member-card__role"> Systems Administrator · Technology</div></div>
+          <p class="member-card__quote">"The conversations in that first meeting were unlike anything I've had at a corporate event."</p>
+        </div>
+        <div class="card member-card">
+          <div class="member-card__avatar">FI</div>
+          <div><div class="member-card__name">Faith Irungu</div><div class="member-card__role">Graduate Learner · Technology</div></div>
+          <p class="member-card__quote">"Stanchics is what I wished existed when I was starting out."</p>
+        </div>
+        <div class="card member-card">
+          <div class="member-card__avatar">SO</div>
+          <div><div class="member-card__name">Suzanne Omuruli</div><div class="member-card__role">Database Administrator · Technology</div></div>
+          <p class="member-card__quote">"Design and tech are better when women are at the table from day one."</p>
+        </div>
+        <div class="card member-card">
+          <div class="member-card__avatar">GK</div>
+          <div><div class="member-card__name">Grace Kahonoki</div><div class="member-card__role">Service Management Analyst · Technology</div></div>
+          <p class="member-card__quote">"Community like this is what makes the hard days worth it."</p>
+        </div>
+        <div class="card member-card member-card--add" onclick="scrollToJoinForm()">
+          <i data-lucide="plus-circle" width="32" height="32" style="color:var(--color-primary); margin-bottom:10px;"></i>
+          <div class="member-card__name">That could be you</div>
+          <div class="member-card__role" style="margin-top:4px">Join the community →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GUIDELINES
+  ============================================================ -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="guidelines fade-in-up">
+        <div class="section__label">Community Guidelines</div>
+        <h2 class="section__heading">How we show up for each other</h2>
+        <p class="guidelines__intro">"Stanchics is a space built on trust, warmth, and the belief that we are all better when we lift each other. Here's how we keep it that way."</p>
+        <div class="guidelines__list">
+          <div class="guidelines__item">
+            <div class="guidelines__item-dot"></div>
+            <p class="guidelines__item-text"><strong>Show up generously.</strong> Share knowledge, make introductions, and celebrate wins loudly — your own and others'.</p>
+          </div>
+          <div class="guidelines__item">
+            <div class="guidelines__item-dot"></div>
+            <p class="guidelines__item-text"><strong>Speak honestly.</strong> We value real conversations over polished performances. Vulnerability is welcome here.</p>
+          </div>
+          <div class="guidelines__item">
+            <div class="guidelines__item-dot"></div>
+            <p class="guidelines__item-text"><strong>Respect every woman's journey.</strong> Career paths are not linear. No comparison, no judgment — only curiosity and encouragement.</p>
+          </div>
+          <div class="guidelines__item">
+            <div class="guidelines__item-dot"></div>
+            <p class="guidelines__item-text"><strong>Keep the space safe.</strong> What's shared in our community stays in our community unless someone explicitly shares otherwise.</p>
+          </div>
+          <div class="guidelines__item">
+            <div class="guidelines__item-dot"></div>
+            <p class="guidelines__item-text"><strong>Lift as you climb.</strong> The measure of this community isn't who rises to the top, but how many we bring with us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       JOIN FORM
+  ============================================================ -->
+  <section class="section section--white" id="joinForm">
+    <div class="container">
+      <div class="join-form-wrap fade-in-up">
+        <div class="join-form-copy">
+          <div class="section__label">Membership</div>
+          <h2 class="join-form-copy__heading">Ready to join?</h2>
+          <p class="join-form-copy__text">Stanchics membership is free, open to all women working in tech in Kenya, and comes with community, events, and people who genuinely get it.</p>
+          <div class="join-form-copy__perks">
+            <div class="join-form-copy__perk">
+              <div class="join-form-copy__perk-icon"><i data-lucide="calendar" width="16" height="16"></i></div>
+              <div class="join-form-copy__perk-text">
+                <strong>Event Access</strong>First invites to all Stanchics events — talks, meetups, and conferences.
+              </div>
+            </div>
+            <div class="join-form-copy__perk">
+              <div class="join-form-copy__perk-icon"><i data-lucide="users" width="16" height="16"></i></div>
+              <div class="join-form-copy__perk-text">
+                <strong>The Network</strong>Connect with women across engineering, product, design, data, and leadership in Kenya.
+              </div>
+            </div>
+            <div class="join-form-copy__perk">
+              <div class="join-form-copy__perk-icon"><i data-lucide="sparkles" width="16" height="16"></i></div>
+              <div class="join-form-copy__perk-text">
+                <strong>Shape What's Coming</strong>As a founding member, your voice matters in how Stanchics grows.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-form">
+          <h3 class="join-form__heading">Join Stanchics</h3>
+          <div id="joinFormSuccess" class="form-success" style="margin-bottom:var(--space-4)">
+            <i data-lucide="check-circle" width="20" height="20"></i>
+            🎉 Welcome to Stanchics! We'll be in touch soon.
+          </div>
+          <div class="join-form__grid">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" placeholder="e.g. Amina Kariuki" id="joinName" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="you@example.com" id="joinEmail" />
+            </div>
+          </div>
+          <div class="join-form__grid">
+            <div class="form-group">
+              <label class="form-label">Job Title</label>
+              <input type="text" class="form-input" placeholder="e.g. Software Engineer" id="joinTitle" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company</label>
+              <input type="text" class="form-input" placeholder="e.g. Safaricom" id="joinCompany" />
+            </div>
+          </div>
+          <div class="join-form__full form-group">
+            <label class="form-label">LinkedIn URL <span style="color:var(--color-neutral-600); font-weight:400">(optional)</span></label>
+            <input type="url" class="form-input" placeholder="https://linkedin.com/in/..." id="joinLinkedin" />
+          </div>
+          <div class="join-form__full form-group">
+            <label class="form-label">What draws you to Stanchics? <span style="color:var(--color-neutral-600); font-weight:400">(optional)</span></label>
+            <textarea class="form-textarea" placeholder="Tell us a little about yourself and why you'd like to join..." id="joinReason"></textarea>
+          </div>
+          <button class="btn btn--primary" id="joinSubmitBtn" style="width:100%; justify-content:center; padding:15px;" onclick="handleJoinSubmit()">
+            <i data-lucide="users" width="16" height="16"></i> Join the Community
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/community.js"></script>
+</body>
+</html>

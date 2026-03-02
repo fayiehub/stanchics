@@ -1,0 +1,84 @@
+/* css/about.css — styles specific to about.html */
+
+.value-item {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-neutral-50);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item__number {
+  position: absolute;
+  top: -10px; right: 16px;
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  line-height: 1;
+  user-select: none;
+}
+
+.value-item__title { font-size: 17px; font-weight: 600; margin-bottom: 8px; position: relative; }
+
+.value-item__desc { font-size: 14.5px; color: var(--color-neutral-600); line-height: 1.65; position: relative; }
+
+.mission-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  border-top: 5px solid var(--color-primary);
+}
+
+.mission-card--vision { border-top-color: var(--color-accent); }
+
+.mission-card__icon {
+  width: 44px; height: 44px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+}
+
+.mission-card--vision .mission-card__icon {
+  background: var(--color-accent-light);
+  color: #B05C50;
+}
+
+.mission-card__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.mission-card--vision .mission-card__label { color: #B05C50; }
+
+.mission-card__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--color-neutral-900);
+  line-height: 1.6;
+}
+
+.story-body {
+  font-size: 17px;
+  color: var(--color-neutral-600);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.story-image-placeholder {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-dark);
+}
