@@ -110,7 +110,7 @@ function initFooter() {
         </div>
         <div class="footer__bottom">
           <span>© 2026 Stanchics. All rights reserved.</span>
-          <span>Made with ❤️ in Nairobi</span>
+          <span>Made with ❤️ by Faith Irungu</span>
         </div>
       </div>
     </footer>

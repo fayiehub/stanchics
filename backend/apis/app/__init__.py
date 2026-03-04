@@ -1,0 +1,1 @@
+# Stanchics API — FastAPI backend
