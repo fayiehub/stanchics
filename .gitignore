@@ -1,3 +1,5 @@
 backend/.env.example
 backend/myvenv/
 backend/.env
+backend/apis/myvenv
+backend/apis/.env

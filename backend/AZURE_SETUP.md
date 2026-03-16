@@ -48,8 +48,8 @@ A resource group is a logical container for all your Stanchics Azure resources.
 
 ```bash
 az group create \
-  --name stanchics-rg \
-  --location eastus
+  --name stanchics_group \
+  --location westeurope
 ```
 
 > You can use `eastus` or `westeurope` — both have free tier availability. Stick with one for the whole project.
@@ -63,11 +63,11 @@ az group create \
 ```bash
 az sql server create \
   --name stanchics-sql-server \
-  --resource-group stanchics-rg \
-  --location eastus \
-  --admin-user stanchicsadmin \
-  --admin-password "YourStr0ngP@ssword!"
-```
+  --resource-group stanchics_group \
+  --location westeurope \
+  --admin-user adminusername \
+  --admin-password "<insert-strong-password>"
+``` 
 
 > **Save the password.** You'll need it for your `.env` file.
 
@@ -75,7 +75,7 @@ az sql server create \
 
 ```bash
 az sql db create \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --server stanchics-sql-server \
   --name stanchics \
   --edition GeneralPurpose \
@@ -96,7 +96,7 @@ az sql db create \
 MY_IP=$(curl -s https://api.ipify.org)
 
 az sql server firewall-rule create \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --server stanchics-sql-server \
   --name AllowMyIP \
   --start-ip-address $MY_IP \
@@ -107,7 +107,7 @@ az sql server firewall-rule create \
 
 ```bash
 az sql server firewall-rule create \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --server stanchics-sql-server \
   --name AllowAzureServices \
   --start-ip-address 0.0.0.0 \
@@ -166,6 +166,7 @@ python -m venv venv
 # Activate it
 source venv/bin/activate      # macOS/Linux
 venv\Scripts\activate         # Windows
+source venv/Scripts/activate  # git bash on windows
 
 # Install dependencies
 pip install -r requirements.txt
@@ -206,7 +207,7 @@ The first run will automatically create the three database tables (`members`, `c
 ```bash
 az appservice plan create \
   --name stanchics-plan \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --sku F1 \
   --is-linux
 ```
@@ -216,7 +217,7 @@ az appservice plan create \
 ```bash
 az webapp create \
   --name stanchics-api \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --plan stanchics-plan \
   --runtime "PYTHON:3.11"
 ```
@@ -228,7 +229,7 @@ Your API will be available at: `https://stanchics-api.azurewebsites.net`
 ```bash
 az webapp config appsettings set \
   --name stanchics-api \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --settings \
     DATABASE_URL="mssql+pyodbc://stanchicsadmin:YourStr0ngP@ssword!@stanchics-sql-server.database.windows.net/stanchics?driver=ODBC+Driver+17+for+SQL+Server" \
     MAILCHIMP_API_KEY="your-key" \
@@ -246,7 +247,7 @@ az webapp config appsettings set \
 ```bash
 az webapp config set \
   --name stanchics-api \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --startup-file "uvicorn app.main:app --host 0.0.0.0 --port 8000"
 ```
 
@@ -261,7 +262,7 @@ git commit -m "Initial Stanchics API"
 # Add Azure as a remote
 az webapp deployment source config-local-git \
   --name stanchics-api \
-  --resource-group stanchics-rg
+  --resource-group stanchics_group
 
 # The command above prints a Git URL — use it:
 git remote add azure https://stanchics-api.scm.azurewebsites.net/stanchics-api.git
@@ -276,7 +277,7 @@ git push azure main
 # Stream live logs
 az webapp log tail \
   --name stanchics-api \
-  --resource-group stanchics-rg
+  --resource-group stanchics_group
 ```
 
 Visit https://stanchics-api.azurewebsites.net/health — it should return `{"status": "ok"}`.
@@ -290,8 +291,8 @@ Visit https://stanchics-api.azurewebsites.net/health — it should return `{"sta
 ```bash
 az staticwebapp create \
   --name stanchics-frontend \
-  --resource-group stanchics-rg \
-  --location eastus2 \
+  --resource-group stanchics_group \
+  --location westeurope \
   --sku Free
 ```
 
@@ -309,7 +310,7 @@ npm install -g @azure/static-web-apps-cli
 
 swa deploy ./  \
   --app-name stanchics-frontend \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --env production
 ```
 
@@ -322,7 +323,7 @@ Go back and update the `ALLOWED_ORIGINS` setting to include your real frontend U
 ```bash
 az webapp config appsettings set \
   --name stanchics-api \
-  --resource-group stanchics-rg \
+  --resource-group stanchics_group \
   --settings ALLOWED_ORIGINS="https://stanchics-frontend.azurestaticapps.net"
 ```
 

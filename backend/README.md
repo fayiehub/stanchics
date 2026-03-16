@@ -191,7 +191,7 @@ sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 odbcinst -q -d -n "ODBC Driver 17 for SQL Server"
 
 # Windows — check Add/Remove Programs for:
-# "Microsoft ODBC Driver 17 for SQL Server"
+# "Microsoft ODBC Driver 17 for SQL Server" 
 ```
 
 ---
@@ -203,7 +203,7 @@ Follow **Steps 1 through 3** in `AZURE_SETUP.md` (included in this project).
 
 After completing those steps you will have:
 
-- An Azure SQL server address, e.g. `stanchics-sql-server.database.windows.net`
+- An Azure SQL server address, i.e. `stanchics-sql-server.database.windows.net`
 - A database named `stanchics`
 - A username and password for the server
 - Your IP address whitelisted in the Azure firewall
